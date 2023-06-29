@@ -17,28 +17,66 @@ struct ContentView: View {
             Color(.systemBlue)
                 .ignoresSafeArea(.all)
                 .overlay(
-                    VStack(alignment: .leading, spacing: 10) {
+                    VStack(alignment: .leading, spacing: 15) {
                         Spacer()
-                        Text("Revolutianize Your Bank").font(.title)
+                        Text("Revolutianize Your Bank").font(.title).foregroundColor(.white)
                         Text("Make Your Banking More").font(.body).foregroundColor(.white)
                         Text("Simple Secure and Convenient").font(.body).foregroundColor(.white)
-                        
-                        
-                        Button(action: {
-                            showWelcomeView = true
+                        VStack(alignment: .leading){
+                            HStack{
+                                Text("Get Started").font(.body).foregroundColor(.white)
+                                MyDraggableButtonComponent()
+                            }
                         }
-                         , label: {
-                            Text("Get Started")
-                                .foregroundColor(.white)
-                        })
-                        NavigationLink("", destination:  HomeScreenView(), isActive: $showWelcomeView)
-                            .navigationBarBackButtonHidden(true)
-                            
-                    }.padding(.bottom)
-                        .padding(.leading)
+                    }
                 )
         }
     }
+}
+
+struct MyDraggableButtonComponent: View {
+    @State private var buttonOffset: CGSize = .zero
+    @State private var dragging = false
+    
+    var body: some View {
+            let dragGesture = DragGesture()
+                .onChanged { value in
+                    let translation = value.translation.width
+                    if translation > 0 {
+                        buttonOffset = CGSize(width: translation, height: 0)
+                        dragging = true
+                    }
+                }
+                .onEnded { value in
+                    if buttonOffset.width > 10 {
+                        NavigationLink("", destination:  HomeScreenView())
+                        
+                    }
+                    
+                    withAnimation {
+                        buttonOffset = .zero
+                        dragging = false
+                    }
+                }
+            return Button(action: {
+                HomeScreenView()
+            })
+        {
+                withAnimation {
+                    Image(systemName: "arrow.right.circle.fill")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .foregroundColor(.blue)
+                        .frame(width: 350, height: 80)
+                        .cornerRadius(10)
+                        .offset(buttonOffset)
+                        .multilineTextAlignment(.center)
+                        .gesture(dragGesture)
+                        .background(Color.white)
+                }.background(Color.white)
+                    .cornerRadius(40)
+            }
+        }
 }
 
 struct ContentView_Previews: PreviewProvider {

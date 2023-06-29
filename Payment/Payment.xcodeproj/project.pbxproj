@@ -15,6 +15,7 @@
 		862DA9D92A4B86C900C93AA3 /* SlideButtonStyling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862DA9D82A4B86C900C93AA3 /* SlideButtonStyling.swift */; };
 		862DA9DB2A4B86F600C93AA3 /* SlideButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862DA9DA2A4B86F600C93AA3 /* SlideButton.swift */; };
 		862DA9DD2A4B871D00C93AA3 /* ShimmerEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862DA9DC2A4B871D00C93AA3 /* ShimmerEffect.swift */; };
+		864E32302A4CB6780052AA6F /* TGFlingActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 864E322F2A4CB6780052AA6F /* TGFlingActionButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		862DA9D82A4B86C900C93AA3 /* SlideButtonStyling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideButtonStyling.swift; sourceTree = "<group>"; };
 		862DA9DA2A4B86F600C93AA3 /* SlideButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideButton.swift; sourceTree = "<group>"; };
 		862DA9DC2A4B871D00C93AA3 /* ShimmerEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShimmerEffect.swift; sourceTree = "<group>"; };
+		864E322F2A4CB6780052AA6F /* TGFlingActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TGFlingActionButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 			children = (
 				862DA9DE2A4B872E00C93AA3 /* SlideButton */,
 				862DA9D32A4B81BD00C93AA3 /* HomeScreenView.swift */,
+				864E322F2A4CB6780052AA6F /* TGFlingActionButton.swift */,
 				862DA9C52A4B788800C93AA3 /* PaymentApp.swift */,
 				862DA9C72A4B788800C93AA3 /* ContentView.swift */,
 				862DA9C92A4B788A00C93AA3 /* Assets.xcassets */,
@@ -164,6 +167,7 @@
 				862DA9C82A4B788800C93AA3 /* ContentView.swift in Sources */,
 				862DA9C62A4B788800C93AA3 /* PaymentApp.swift in Sources */,
 				862DA9DD2A4B871D00C93AA3 /* ShimmerEffect.swift in Sources */,
+				864E32302A4CB6780052AA6F /* TGFlingActionButton.swift in Sources */,
 				862DA9DB2A4B86F600C93AA3 /* SlideButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
